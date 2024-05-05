@@ -41,7 +41,8 @@ async function taint() {
 	fs.writeFileSync(`${storagePath}/in.facts`, sourceNode.toString());
 
 	console.log(process.cwd())
-	const souffleCommand = `souffle -F${storagePath} ${extensionPath}/DL-Taint-Analysis/taint_analysis.dl -D${storagePath}/analysis_out`
+	const analysisPath = `${extensionPath}/submodules/GraphIR-Static-Analysis`;
+	const souffleCommand = `souffle -F${storagePath} ${analysisPath}/taint_analysis.dl -D${storagePath}/analysis_out`
 	execSync(souffleCommand);
 	const taintedVertices = fs.readFileSync(`${storagePath}/analysis_out/out.facts`).toString().split('\n').map(s => parseInt(s)).filter(n => !isNaN(n));
 	const taintedRanges : Array<vscode.Range> = [];

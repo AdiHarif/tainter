@@ -23,6 +23,7 @@
     ]
   },
   "scripts": {
+    "preinstall": "git submodule update --init --recursive && pushd submodules/TS-Graph-Extractor && npm install && npm run build && popd && pushd submodules/GraphIR-Static-Analysis && make functors && popd",
     "vscode:prepublish": "npm run compile",
     "compile": "tsc",
     "watch": "tsc -watch",
@@ -44,6 +45,8 @@
   },
   "dependencies": {
     "csv-parse": "^5.4.0",
+    "graphir": "file:submodules/TS-Graph-Extractor/submodules/graphir",
+    "ts-graph-extractor": "file:submodules/TS-Graph-Extractor",
     "typescript": "^4.8.4"
   }
 }
