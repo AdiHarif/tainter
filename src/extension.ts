@@ -11,6 +11,7 @@ import * as extractor from 'ts-graph-extractor';
 
 import * as utils from './utils';
 import { DecorationManager } from './decoration';
+import { tainterTest } from './webview';
 
 const decorationsManager = new DecorationManager();
 
@@ -64,9 +65,12 @@ async function taint() {
 	decorationsManager.decorateRanges(taintedRanges);
 }
 
+
 // This method is called when your extension is activated
 // Your extension is activated the very first time the command is executed
 export function activate(context: vscode.ExtensionContext) {
+
+	// activatePolacode(context);
 
 	extensionPath = context.extensionPath;
 	storagePath = context.storageUri!.fsPath;
@@ -83,8 +87,9 @@ export function activate(context: vscode.ExtensionContext) {
 	// The commandId parameter must match the command field in package.json
 	let disposable = vscode.commands.registerCommand('Tainter.taint', taint)
 	let clearDisposable = vscode.commands.registerCommand('Tainter.clearDecorations', clearDecorations)
+	let testDisposable = vscode.commands.registerCommand('Tainter.test', () => tainterTest(context))
 
-	context.subscriptions.push(disposable, clearDisposable,)
+	context.subscriptions.push(disposable, clearDisposable, testDisposable)
 }
 
 // This method is called when your extension is deactivated
