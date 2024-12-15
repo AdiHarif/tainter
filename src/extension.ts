@@ -6,8 +6,10 @@ import * as vscode from 'vscode';
 import { execSync } from 'child_process';
 import * as fs from 'fs';
 
-import * as ir from 'graphir';
-import * as extractor from 'ts-graph-extractor';
+let ir;
+let extractor;
+import('graphir').then(m => ir = m);
+import('ts-graph-extractor').then(m => extractor = m);
 
 import * as utils from './utils';
 import { DecorationManager } from './decoration';
@@ -33,6 +35,8 @@ async function taint() {
 	 * 5. query analysis result
 	 * 6. highlight results
 	 */
+
+
 
 	const sourceFile = vscode.window.activeTextEditor!.document.fileName;
 	const graph = extractor.extractFromPath(sourceFile);
