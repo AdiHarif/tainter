@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+</head>
+
+<body role="document">
+    <div id="snippet-container" style="background-color: rgb(242, 242, 242);">
+        <div id="snippet">
+            <div
+                style="display: flex; flex-direction: column; padding: 50px; color: #cccccc;background-color: #1f1f1f;font-family: 'Droid Sans Mono', 'monospace', monospace;font-weight: normal; font-size: 20px; white-space: pre;">
+                <div style="display: flex">
+                    <span style="color: #569cd6;">function</span>
+                    <span style="color: #cccccc;"> </span>
+                    <span style="color: #dcdcaa;">foo</span><span style="color: #cccccc;">(</span>
+                    <span style="color: #9cdcfe;">a</span>
+                    <span style="color: #d4d4d4;">:</span>
+                    <span style="color: #cccccc;"> </span>
+                    <span style="color: #4ec9b0;">number</span>
+                    <span style="color: #cccccc;">,</span>
+                    <span style="color: #cccccc;"> </span>
+                    <span style="color: #9cdcfe;">b</span>
+                    <span style="color: #d4d4d4;">:</span>
+                    <span style="color: #cccccc;"> </span>
+                    <span style="color: #4ec9b0;">number</span>
+                    <span style="color: #cccccc;">,</span>
+                    <span style="color: #cccccc;"> </span>
+                    <span style="color: #9cdcfe;">cond</span>
+                    <span style="color: #d4d4d4;">:</span>
+                    <span style="color: #cccccc;"> </span>
+                    <span style="color: #4ec9b0;">boolean</span>
+                    <span style="color: #cccccc;">) {</span>
+                </div>
+                <div style="display: flex">
+                    <span style="color: #cccccc;">    </span>
+                    <span style="color: #569cd6;">let</span>
+                    <span style="color: #cccccc;"> </span>
+                    <span style="color: #9cdcfe;">x</span>
+                    <span style="color: #cccccc;">:</span>
+                    <span style="color: #cccccc;"> </span>
+                    <span style="color: #4ec9b0;">any</span>
+                    <span style="color: #cccccc;"> </span>
+                    <span style="color: #cccccc;">=</span>
+                    <span style="color: #cccccc;"> </span>
+                    <span style="color: #cccccc;">0</span>
+                    <span style="color: #cccccc;">;</span>
+                    <span style="color: #cccccc;">--------------------------------------------Integer</span>
+                    <span id="start"> </span>
+                </div>
+                <div style="display: flex">
+                    <span style="color: #cccccc;">    </span>
+                    <span style="color: #c586c0;">while</span>
+                    <span style="color: #cccccc;"> (</span>
+                    <span style="color: #569cd6;">true</span>
+                    <span style="color: #cccccc;">) {</span>
+                </div>
+                <div style="display: flex">
+                    <span style="color: #cccccc;">        </span>
+                    <span style="color: #c586c0;">if</span>
+                    <span style="color: #cccccc;"> </span>
+                    <span style="color: #cccccc;">(</span>
+                    <span style="color: #9cdcfe;">cond</span>
+                    <span style="color: #cccccc;">) {</span>
+                </div>
+                <div style="display: flex">
+                    <span style="color: #cccccc;">            </span>
+                    <span style="color: #9cdcfe;">x</span>
+                    <span style="color: #cccccc;"> </span>
+                    <span style="color: #d4d4d4;">=</span>
+                    <span style="color: #cccccc;"> </span>
+                    <span style="color: #9cdcfe;">x</span>
+                    <span style="color: #cccccc;"> </span>
+                    <span style="color: #cccccc;">+</span>
+                    <span style="color: #cccccc;"> </span>
+                    <span style="color: #9cdcfe;">a</span>
+                    <span style="color: #cccccc;">;</span>
+                    <span style="color: #cccccc;">-----Union&lt;String,Integer&gt;,Union&lt;String,Integer&gt;</span>
+                    <span id="mid"> </span>
+                </div>
+                <div style="display: flex">
+                    <span style="color: #cccccc;">        </span>
+                    <span style="color: #cccccc;">}</span>
+                </div>
+                <div style="display: flex">
+                    <span style="color: #cccccc;">        </span>
+                    <span style="color: #c586c0;">else</span>
+                    <span style="color: #cccccc;"> </span>
+                    <span style="color: #cccccc;">{</span>
+                </div>
+                <div style="display: flex">
+                    <span style="color: #cccccc;">            </span>
+                    <span style="color: #9cdcfe;">x</span>
+                    <span style="color: #cccccc;"> </span>
+                    <span style="color: #cccccc;">=</span>
+                    <span style="color: #cccccc;"> </span>
+                    <span style="color: #9cdcfe;">b</span>
+                    <span style="color: #cccccc;">;</span>
+                    <span style="color: #cccccc;">----------------------------------------------String</span>
+                    <span id="end"> </span>
+                </div>
+                <div style="display: flex">
+                    <span style="color: #cccccc;">        </span>
+                    <span style="color: #cccccc;">}</span>
+                </div>
+                <div style="display: flex">
+                    <span style="color: #cccccc;">    </span>
+                    <span style="color: #cccccc;">}</span>
+                </div>
+                <div style="display: flex">
+                    <span style="color: #cccccc;">    </span>
+                    <span style="color: #c586c0;">return</span>
+                    <span style="color: #cccccc;"> </span>
+                    <span style="color: #9cdcfe;">x</span>
+                    <span style="color: #cccccc;">;</span>
+                </div>
+                <div style="display: flex">
+                    <span style="color: #cccccc;">}</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="module" src="script.js"></script>
+</body>
+
+</html>
